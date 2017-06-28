@@ -60,6 +60,7 @@
     <Compile Include="Buy.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controller.cs" />
     <Compile Include="Customer.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
@@ -102,6 +103,7 @@
     <Compile Include="Kala.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Db.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagram.cs">
