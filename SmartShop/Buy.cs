@@ -19,7 +19,6 @@ namespace SmartShop
         public int quantity { get; set; }
     
         public virtual Invoice Invoice { get; set; }
-        public virtual Invoice Invoice1 { get; set; }
         public virtual Kala Kala { get; set; }
     }
 }

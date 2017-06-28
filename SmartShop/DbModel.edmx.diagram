@@ -12,7 +12,6 @@
         <EntityTypeShape EntityType="SmartShopModel.sysdiagram" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="SmartShopModel.User" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="SmartShopModel.FK_Buy_Invoice" ManuallyRouted="false" />
-        <AssociationConnector Association="SmartShopModel.FK_Buy_Invoice1" ManuallyRouted="false" />
         <AssociationConnector Association="SmartShopModel.FK_Buy_Kala" ManuallyRouted="false" />
         <AssociationConnector Association="SmartShopModel.FK_Invoice_Customer" ManuallyRouted="false" />
         <AssociationConnector Association="SmartShopModel.FK_Invoice_User" ManuallyRouted="false" />
