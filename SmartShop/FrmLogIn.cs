@@ -56,5 +56,10 @@ namespace SmartShop
                 MessageBox.Show("Password is not correct!");
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

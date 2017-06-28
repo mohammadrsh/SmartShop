@@ -22,5 +22,11 @@ namespace SmartShop
             FrmLogIn frm = new FrmLogIn();
             frm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmLogIn frm = new FrmLogIn();
+            frm.ShowDialog();
+        }
     }
 }
