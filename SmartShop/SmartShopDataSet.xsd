@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SmartShopDataSet" targetNamespace="http://tempuri.org/SmartShopDataSet.xsd" xmlns:mstns="http://tempuri.org/SmartShopDataSet.xsd" xmlns="http://tempuri.org/SmartShopDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SmartShopConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SmartShopConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartShop.Properties.Settings.GlobalReference.Default.SmartShopConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KalaTableAdapter" GeneratorDataComponentClassName="KalaTableAdapter" Name="Kala" UserDataComponentName="KalaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SmartShopConnectionString (Settings)" DbObjectName="SmartShop.dbo.Kala" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT name, producer, creatDate, expireDate, price, quantity, discount FROM dbo.Kala</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="producer" DataSetColumn="producer" />
+              <Mapping SourceColumn="creatDate" DataSetColumn="creatDate" />
+              <Mapping SourceColumn="expireDate" DataSetColumn="expireDate" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+              <Mapping SourceColumn="quantity" DataSetColumn="quantity" />
+              <Mapping SourceColumn="discount" DataSetColumn="discount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SmartShopDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SmartShopDataSet" msprop:Generator_UserDSName="SmartShopDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Kala" msprop:Generator_TableClassName="KalaDataTable" msprop:Generator_TableVarName="tableKala" msprop:Generator_TablePropName="Kala" msprop:Generator_RowDeletingName="KalaRowDeleting" msprop:Generator_RowChangingName="KalaRowChanging" msprop:Generator_RowEvHandlerName="KalaRowChangeEventHandler" msprop:Generator_RowDeletedName="KalaRowDeleted" msprop:Generator_UserTableName="Kala" msprop:Generator_RowChangedName="KalaRowChanged" msprop:Generator_RowEvArgName="KalaRowChangeEvent" msprop:Generator_RowClassName="KalaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="producer" msprop:Generator_ColumnVarNameInTable="columnproducer" msprop:Generator_ColumnPropNameInRow="producer" msprop:Generator_ColumnPropNameInTable="producerColumn" msprop:Generator_UserColumnName="producer">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="creatDate" msprop:Generator_ColumnVarNameInTable="columncreatDate" msprop:Generator_ColumnPropNameInRow="creatDate" msprop:Generator_ColumnPropNameInTable="creatDateColumn" msprop:Generator_UserColumnName="creatDate" type="xs:dateTime" />
+              <xs:element name="expireDate" msprop:Generator_ColumnVarNameInTable="columnexpireDate" msprop:Generator_ColumnPropNameInRow="expireDate" msprop:Generator_ColumnPropNameInTable="expireDateColumn" msprop:Generator_UserColumnName="expireDate" type="xs:dateTime" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:int" />
+              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_UserColumnName="quantity" type="xs:int" />
+              <xs:element name="discount" msprop:Generator_ColumnVarNameInTable="columndiscount" msprop:Generator_ColumnPropNameInRow="discount" msprop:Generator_ColumnPropNameInTable="discountColumn" msprop:Generator_UserColumnName="discount" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
