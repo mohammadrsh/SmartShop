@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f0ce7e67865f4abebcefb23cb84f6478" Name="Diagram1">
+        <EntityTypeShape EntityType="SmartShopModel.Buy" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShopModel.Customer" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShopModel.Invoice" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShopModel.Kala" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShopModel.sysdiagram" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShopModel.User" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="SmartShopModel.FK_Buy_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShopModel.FK_Buy_Invoice1" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShopModel.FK_Buy_Kala" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShopModel.FK_Invoice_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShopModel.FK_Invoice_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShopModel.FK_Kala_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
