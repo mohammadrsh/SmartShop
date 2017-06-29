@@ -132,6 +132,9 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Transaction.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
