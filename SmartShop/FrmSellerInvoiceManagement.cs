@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SmartShop
 {
-    public partial class FrmSellClerk : Form
+    public partial class FrmSellerInvoiceManagement : Form
     {
-        public FrmSellClerk()
+        public FrmSellerInvoiceManagement()
         {
             InitializeComponent();
-        }
-
-        private void SellClreckfrm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
