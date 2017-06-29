@@ -41,7 +41,11 @@ namespace SmartShop
                 MessageBox.Show("Login successfull!");
 
                 int access = user.access;
-                //if(access == 0)
+                if(access == 0)
+                {
+                    frmAdminMenu frm = new frmAdminMenu();
+                    frm.ShowDialog();
+                }
                     
                 //else if (access == 1)
 
