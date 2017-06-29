@@ -118,11 +118,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 314);
+            this.ClientSize = new System.Drawing.Size(906, 314);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmSellerInvoiceManagement";
             this.Text = "FrmSellerInvoiceManagement";
+            this.Load += new System.EventHandler(this.FrmSellerInvoiceManagement_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

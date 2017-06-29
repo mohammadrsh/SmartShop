@@ -16,5 +16,10 @@ namespace SmartShop
         {
             InitializeComponent();
         }
+
+        private void FrmSellerInvoiceManagement_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
