@@ -200,7 +200,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(223, 153);
+            this.button1.Location = new System.Drawing.Point(338, 153);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 28);
             this.button1.TabIndex = 22;
@@ -218,7 +218,7 @@
             // 
             // EditCustomerBtn
             // 
-            this.EditCustomerBtn.Location = new System.Drawing.Point(223, 103);
+            this.EditCustomerBtn.Location = new System.Drawing.Point(338, 103);
             this.EditCustomerBtn.Margin = new System.Windows.Forms.Padding(2);
             this.EditCustomerBtn.Name = "EditCustomerBtn";
             this.EditCustomerBtn.Size = new System.Drawing.Size(88, 28);
