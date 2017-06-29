@@ -116,7 +116,6 @@
             this.label4.Size = new System.Drawing.Size(378, 94);
             this.label4.TabIndex = 14;
             this.label4.Text = "smart shop";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -139,7 +138,7 @@
             this.lblSignUp.TabIndex = 16;
             this.lblSignUp.TabStop = true;
             this.lblSignUp.Text = "Sign up";
-            this.lblSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lblSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblSignUp_LinkClicked);
             // 
             // FrmLogIn
             // 
@@ -160,7 +159,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmLogIn";
             this.Text = "FrmLogIn";
-            this.Load += new System.EventHandler(this.FrmLogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

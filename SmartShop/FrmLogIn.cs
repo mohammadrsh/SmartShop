@@ -17,12 +17,7 @@ namespace SmartShop
             InitializeComponent();
         }
 
-        private void FrmLogIn_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lblSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FrmSignUp frm = new FrmSignUp();
             frm.ShowDialog();
@@ -55,11 +50,6 @@ namespace SmartShop
             {
                 MessageBox.Show("Password is not correct!");
             }
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

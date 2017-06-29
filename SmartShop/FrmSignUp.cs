@@ -16,5 +16,28 @@ namespace SmartShop
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+            if (txtUserName.Text.Length == 0 || txtPassword.Text.ToString().Length == 0)
+            {
+                MessageBox.Show("Please fill the fields!");
+            }
+            String username = txtUserName.Text.ToString();
+            String password = txtPassword.Text.ToString();
+            int userType = cbUserType.SelectedIndex;
+
+            var context = Db.getInstance();
+            context.Users.Add(new User
+            {
+                user1 = username,
+                pass = password,
+                access = userType
+            });
+            context.SaveChanges();
+            MessageBox.Show("Susseccfully Added!");
+
+        }
     }
 }
