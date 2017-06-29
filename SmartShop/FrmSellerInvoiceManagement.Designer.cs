@@ -31,15 +31,29 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.EnterBtn = new System.Windows.Forms.Button();
             this.CustomerIDtxt = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.InvoiceDataGridView = new System.Windows.Forms.DataGridView();
             this.InvoiceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InvoiceDateAndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CashierNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoice = new System.Windows.Forms.GroupBox();
+            this.AddInvoiceBtn = new System.Windows.Forms.Button();
+            this.EditInvoiceBtn = new System.Windows.Forms.Button();
+            this.DeleteInvoiceBtn = new System.Windows.Forms.Button();
+            this.ProductDataGridView = new System.Windows.Forms.DataGridView();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreatDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExpireDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InvoiceDataGridView)).BeginInit();
+            this.invoice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -69,20 +83,20 @@
             this.CustomerIDtxt.Size = new System.Drawing.Size(100, 20);
             this.CustomerIDtxt.TabIndex = 1;
             // 
-            // dataGridView1
+            // InvoiceDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.InvoiceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InvoiceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.InvoiceNumber,
             this.InvoiceDateAndTime,
             this.CashierNumber,
             this.CustomerNumber,
             this.ProductName,
             this.Price});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 60);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(431, 150);
-            this.dataGridView1.TabIndex = 2;
+            this.InvoiceDataGridView.Location = new System.Drawing.Point(3, 60);
+            this.InvoiceDataGridView.Name = "InvoiceDataGridView";
+            this.InvoiceDataGridView.Size = new System.Drawing.Size(431, 150);
+            this.InvoiceDataGridView.TabIndex = 2;
             // 
             // InvoiceNumber
             // 
@@ -114,19 +128,115 @@
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             // 
+            // invoice
+            // 
+            this.invoice.Controls.Add(this.EditInvoiceBtn);
+            this.invoice.Controls.Add(this.DeleteInvoiceBtn);
+            this.invoice.Controls.Add(this.AddInvoiceBtn);
+            this.invoice.Location = new System.Drawing.Point(453, 3);
+            this.invoice.Name = "invoice";
+            this.invoice.Size = new System.Drawing.Size(298, 207);
+            this.invoice.TabIndex = 3;
+            this.invoice.TabStop = false;
+            this.invoice.Text = "INVOICE";
+            // 
+            // AddInvoiceBtn
+            // 
+            this.AddInvoiceBtn.Location = new System.Drawing.Point(217, 19);
+            this.AddInvoiceBtn.Name = "AddInvoiceBtn";
+            this.AddInvoiceBtn.Size = new System.Drawing.Size(75, 23);
+            this.AddInvoiceBtn.TabIndex = 2;
+            this.AddInvoiceBtn.Text = "Add";
+            this.AddInvoiceBtn.UseVisualStyleBackColor = true;
+            // 
+            // EditInvoiceBtn
+            // 
+            this.EditInvoiceBtn.Location = new System.Drawing.Point(217, 122);
+            this.EditInvoiceBtn.Name = "EditInvoiceBtn";
+            this.EditInvoiceBtn.Size = new System.Drawing.Size(75, 23);
+            this.EditInvoiceBtn.TabIndex = 3;
+            this.EditInvoiceBtn.Text = "Edit";
+            this.EditInvoiceBtn.UseVisualStyleBackColor = true;
+            // 
+            // DeleteInvoiceBtn
+            // 
+            this.DeleteInvoiceBtn.Location = new System.Drawing.Point(217, 178);
+            this.DeleteInvoiceBtn.Name = "DeleteInvoiceBtn";
+            this.DeleteInvoiceBtn.Size = new System.Drawing.Size(75, 23);
+            this.DeleteInvoiceBtn.TabIndex = 4;
+            this.DeleteInvoiceBtn.Text = "Delete";
+            this.DeleteInvoiceBtn.UseVisualStyleBackColor = true;
+            // 
+            // ProductDataGridView
+            // 
+            this.ProductDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Name,
+            this.Producer,
+            this.CreatDate,
+            this.ExpireDate,
+            this.ProductPrice,
+            this.Quantity,
+            this.Discount});
+            this.ProductDataGridView.Location = new System.Drawing.Point(4, 216);
+            this.ProductDataGridView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ProductDataGridView.Name = "ProductDataGridView";
+            this.ProductDataGridView.RowTemplate.Height = 24;
+            this.ProductDataGridView.Size = new System.Drawing.Size(747, 92);
+            this.ProductDataGridView.TabIndex = 4;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            // 
+            // Producer
+            // 
+            this.Producer.HeaderText = "Producer";
+            this.Producer.Name = "Producer";
+            // 
+            // CreatDate
+            // 
+            this.CreatDate.HeaderText = "Create Date";
+            this.CreatDate.Name = "CreatDate";
+            // 
+            // ExpireDate
+            // 
+            this.ExpireDate.HeaderText = "Expire Date";
+            this.ExpireDate.Name = "ExpireDate";
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.HeaderText = "Price";
+            this.ProductPrice.Name = "ProductPrice";
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            // 
+            // Discount
+            // 
+            this.Discount.HeaderText = "Discount";
+            this.Discount.Name = "Discount";
+            // 
             // FrmSellerInvoiceManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 314);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ProductDataGridView);
+            this.Controls.Add(this.invoice);
+            this.Controls.Add(this.InvoiceDataGridView);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmSellerInvoiceManagement";
             this.Text = "FrmSellerInvoiceManagement";
             this.Load += new System.EventHandler(this.FrmSellerInvoiceManagement_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InvoiceDataGridView)).EndInit();
+            this.invoice.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -134,7 +244,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView InvoiceDataGridView;
         private System.Windows.Forms.TextBox CustomerIDtxt;
         private System.Windows.Forms.Button EnterBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceNumber;
@@ -143,5 +253,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.GroupBox invoice;
+        private System.Windows.Forms.Button EditInvoiceBtn;
+        private System.Windows.Forms.Button DeleteInvoiceBtn;
+        private System.Windows.Forms.Button AddInvoiceBtn;
+        private System.Windows.Forms.DataGridView ProductDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CreatDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExpireDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Discount;
     }
 }
