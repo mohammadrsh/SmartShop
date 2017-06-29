@@ -16,6 +16,8 @@
         <AssociationConnector Association="SmartShopModel.FK_Invoice_Customer" ManuallyRouted="false" />
         <AssociationConnector Association="SmartShopModel.FK_Invoice_User" ManuallyRouted="false" />
         <AssociationConnector Association="SmartShopModel.FK_Kala_User" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SmartShopModel.Transaction" Width="1.5" PointX="5.25" PointY="8.75" />
+        <AssociationConnector Association="SmartShopModel.FK_Transaction_Invoice" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

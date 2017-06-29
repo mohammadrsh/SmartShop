@@ -31,5 +31,6 @@ namespace SmartShop
         public virtual DbSet<Kala> Kalas { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Transaction> Transactions { get; set; }
     }
 }

@@ -18,6 +18,7 @@ namespace SmartShop
         public Invoice()
         {
             this.Buys = new HashSet<Buy>();
+            this.Transactions = new HashSet<Transaction>();
         }
     
         public int id { get; set; }
@@ -29,5 +30,7 @@ namespace SmartShop
         public virtual ICollection<Buy> Buys { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Transaction> Transactions { get; set; }
     }
 }
