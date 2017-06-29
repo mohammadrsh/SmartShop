@@ -1,6 +1,6 @@
 ﻿namespace SmartShop
 {
-    partial class SellClreckfrm
+    partial class FrmSellClerk
     {
         /// <summary>
         /// Required designer variable.

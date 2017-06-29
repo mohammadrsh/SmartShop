@@ -10,17 +10,15 @@ using System.Windows.Forms;
 
 namespace SmartShop
 {
-    public partial class FrmCustomer : Form
+    public partial class FrmSellClerk : Form
     {
-        public FrmCustomer()
+        public FrmSellClerk()
         {
             InitializeComponent();
         }
 
-        private void btnSubmitCustomer_Click(object sender, EventArgs e)
+        private void SellClreckfrm_Load(object sender, EventArgs e)
         {
-            String name = txtAddress.Text.ToString();
-            
 
         }
     }

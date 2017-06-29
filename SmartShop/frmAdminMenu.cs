@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SmartShop
 {
-    public partial class frmAdminMenu : Form
+    public partial class FrmAdminMenu : Form
     {
-        public frmAdminMenu()
+        public FrmAdminMenu()
         {
             InitializeComponent();
         }

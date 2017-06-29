@@ -43,7 +43,7 @@ namespace SmartShop
                 int access = user.access;
                 if(access == 0)
                 {
-                    frmAdminMenu frm = new frmAdminMenu();
+                    FrmAdminMenu frm = new FrmAdminMenu();
                     frm.ShowDialog();
                 }
                     
