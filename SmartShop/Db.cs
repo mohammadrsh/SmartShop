@@ -7,7 +7,14 @@ using System.Threading.Tasks;
 namespace SmartShop
 {
     class Db
+
     {
+        private static SmartShopEntities dbContex = new SmartShopEntities();
+        public static SmartShopEntities GetContex()
+        {
+            return dbContex;
+        }
+
         public static SmartShopEntities ume;
         public static SmartShopEntities getInstance()
         {
