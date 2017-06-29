@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgProductList = new System.Windows.Forms.DataGridView();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creatDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,21 +41,21 @@
             this.smartShopDataSet = new SmartShop.SmartShopDataSet();
             this.kalaTableAdapter = new SmartShop.SmartShopDataSetTableAdapters.KalaTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtNameProduct = new System.Windows.Forms.TextBox();
-            this.txtProducer = new System.Windows.Forms.TextBox();
-            this.txtCreatDate = new System.Windows.Forms.TextBox();
-            this.txtExpireDate = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.txtDiscount = new System.Windows.Forms.TextBox();
             this.btnAddProduct = new System.Windows.Forms.Button();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtExpireDate = new System.Windows.Forms.TextBox();
+            this.txtCreatDate = new System.Windows.Forms.TextBox();
+            this.txtProducer = new System.Windows.Forms.TextBox();
+            this.txtNameProduct = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.txtDiscountEdit = new System.Windows.Forms.TextBox();
@@ -74,7 +74,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProductList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartShopDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -82,11 +82,11 @@
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgProductList
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgProductList.AutoGenerateColumns = false;
+            this.dgProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
             this.producerDataGridViewTextBoxColumn,
             this.creatDateDataGridViewTextBoxColumn,
@@ -94,13 +94,13 @@
             this.priceDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn,
             this.discountDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.kalaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(133, 13);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(742, 245);
-            this.dataGridView1.TabIndex = 0;
+            this.dgProductList.DataSource = this.kalaBindingSource;
+            this.dgProductList.Location = new System.Drawing.Point(133, 13);
+            this.dgProductList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgProductList.Name = "dgProductList";
+            this.dgProductList.RowTemplate.Height = 24;
+            this.dgProductList.Size = new System.Drawing.Size(742, 245);
+            this.dgProductList.TabIndex = 0;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -182,59 +182,63 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add new Product";
             // 
-            // label1
+            // btnAddProduct
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
+            this.btnAddProduct.Location = new System.Drawing.Point(159, 305);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(99, 33);
+            this.btnAddProduct.TabIndex = 14;
+            this.btnAddProduct.Text = "Add";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // txtDiscount
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Producer";
+            this.txtDiscount.Location = new System.Drawing.Point(158, 271);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(100, 26);
+            this.txtDiscount.TabIndex = 13;
             // 
-            // label3
+            // txtQuantity
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Creat Date";
+            this.txtQuantity.Location = new System.Drawing.Point(158, 229);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(100, 26);
+            this.txtQuantity.TabIndex = 12;
             // 
-            // label4
+            // txtPrice
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Expire Date";
+            this.txtPrice.Location = new System.Drawing.Point(158, 189);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(100, 26);
+            this.txtPrice.TabIndex = 11;
             // 
-            // label5
+            // txtExpireDate
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(60, 192);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Price";
+            this.txtExpireDate.Location = new System.Drawing.Point(158, 151);
+            this.txtExpireDate.Name = "txtExpireDate";
+            this.txtExpireDate.Size = new System.Drawing.Size(100, 26);
+            this.txtExpireDate.TabIndex = 10;
             // 
-            // label6
+            // txtCreatDate
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(60, 229);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Quantity";
+            this.txtCreatDate.Location = new System.Drawing.Point(158, 105);
+            this.txtCreatDate.Name = "txtCreatDate";
+            this.txtCreatDate.Size = new System.Drawing.Size(100, 26);
+            this.txtCreatDate.TabIndex = 9;
+            // 
+            // txtProducer
+            // 
+            this.txtProducer.Location = new System.Drawing.Point(158, 70);
+            this.txtProducer.Name = "txtProducer";
+            this.txtProducer.Size = new System.Drawing.Size(100, 26);
+            this.txtProducer.TabIndex = 8;
+            // 
+            // txtNameProduct
+            // 
+            this.txtNameProduct.Location = new System.Drawing.Point(158, 34);
+            this.txtNameProduct.Name = "txtNameProduct";
+            this.txtNameProduct.Size = new System.Drawing.Size(100, 26);
+            this.txtNameProduct.TabIndex = 7;
             // 
             // label7
             // 
@@ -245,63 +249,59 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Discount";
             // 
-            // txtNameProduct
+            // label6
             // 
-            this.txtNameProduct.Location = new System.Drawing.Point(158, 34);
-            this.txtNameProduct.Name = "txtNameProduct";
-            this.txtNameProduct.Size = new System.Drawing.Size(100, 26);
-            this.txtNameProduct.TabIndex = 7;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(60, 229);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 20);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Quantity";
             // 
-            // txtProducer
+            // label5
             // 
-            this.txtProducer.Location = new System.Drawing.Point(158, 70);
-            this.txtProducer.Name = "txtProducer";
-            this.txtProducer.Size = new System.Drawing.Size(100, 26);
-            this.txtProducer.TabIndex = 8;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(60, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 20);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Price";
             // 
-            // txtCreatDate
+            // label4
             // 
-            this.txtCreatDate.Location = new System.Drawing.Point(158, 105);
-            this.txtCreatDate.Name = "txtCreatDate";
-            this.txtCreatDate.Size = new System.Drawing.Size(100, 26);
-            this.txtCreatDate.TabIndex = 9;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(60, 154);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Expire Date";
             // 
-            // txtExpireDate
+            // label3
             // 
-            this.txtExpireDate.Location = new System.Drawing.Point(158, 151);
-            this.txtExpireDate.Name = "txtExpireDate";
-            this.txtExpireDate.Size = new System.Drawing.Size(100, 26);
-            this.txtExpireDate.TabIndex = 10;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(60, 111);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Creat Date";
             // 
-            // txtPrice
+            // label2
             // 
-            this.txtPrice.Location = new System.Drawing.Point(158, 189);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(100, 26);
-            this.txtPrice.TabIndex = 11;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(60, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Producer";
             // 
-            // txtQuantity
+            // label1
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(158, 229);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(100, 26);
-            this.txtQuantity.TabIndex = 12;
-            // 
-            // txtDiscount
-            // 
-            this.txtDiscount.Location = new System.Drawing.Point(158, 271);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(100, 26);
-            this.txtDiscount.TabIndex = 13;
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.Location = new System.Drawing.Point(159, 305);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(99, 33);
-            this.btnAddProduct.TabIndex = 14;
-            this.btnAddProduct.Text = "Add";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(60, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name";
             // 
             // groupBox2
             // 
@@ -475,12 +475,12 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgProductList);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmProductsList";
             this.Text = "FrmProductsList";
             this.Load += new System.EventHandler(this.FrmProductsList_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProductList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartShopDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -494,7 +494,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgProductList;
         private SmartShopDataSet smartShopDataSet;
         private System.Windows.Forms.BindingSource kalaBindingSource;
         private SmartShopDataSetTableAdapters.KalaTableAdapter kalaTableAdapter;
