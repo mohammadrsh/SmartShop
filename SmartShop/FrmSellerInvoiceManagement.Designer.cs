@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.EnterBtn = new System.Windows.Forms.Button();
             this.CustomerIDtxt = new System.Windows.Forms.TextBox();
+            this.EnterBtn = new System.Windows.Forms.Button();
             this.InvoiceDataGridView = new System.Windows.Forms.DataGridView();
             this.InvoiceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InvoiceDateAndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,9 +39,9 @@
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoice = new System.Windows.Forms.GroupBox();
-            this.AddInvoiceBtn = new System.Windows.Forms.Button();
             this.EditInvoiceBtn = new System.Windows.Forms.Button();
             this.DeleteInvoiceBtn = new System.Windows.Forms.Button();
+            this.AddInvoiceBtn = new System.Windows.Forms.Button();
             this.ProductDataGridView = new System.Windows.Forms.DataGridView();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producer = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,28 +60,32 @@
             // 
             this.groupBox1.Controls.Add(this.CustomerIDtxt);
             this.groupBox1.Controls.Add(this.EnterBtn);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(431, 51);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(575, 63);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter Customer ID:";
             // 
+            // CustomerIDtxt
+            // 
+            this.CustomerIDtxt.Location = new System.Drawing.Point(160, 15);
+            this.CustomerIDtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CustomerIDtxt.Name = "CustomerIDtxt";
+            this.CustomerIDtxt.Size = new System.Drawing.Size(132, 22);
+            this.CustomerIDtxt.TabIndex = 1;
+            // 
             // EnterBtn
             // 
-            this.EnterBtn.Location = new System.Drawing.Point(236, 12);
+            this.EnterBtn.Location = new System.Drawing.Point(315, 15);
+            this.EnterBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EnterBtn.Name = "EnterBtn";
-            this.EnterBtn.Size = new System.Drawing.Size(75, 23);
+            this.EnterBtn.Size = new System.Drawing.Size(100, 28);
             this.EnterBtn.TabIndex = 0;
             this.EnterBtn.Text = "Enter";
             this.EnterBtn.UseVisualStyleBackColor = true;
-            // 
-            // CustomerIDtxt
-            // 
-            this.CustomerIDtxt.Location = new System.Drawing.Point(120, 12);
-            this.CustomerIDtxt.Name = "CustomerIDtxt";
-            this.CustomerIDtxt.Size = new System.Drawing.Size(100, 20);
-            this.CustomerIDtxt.TabIndex = 1;
             // 
             // InvoiceDataGridView
             // 
@@ -93,9 +97,10 @@
             this.CustomerNumber,
             this.ProductName,
             this.Price});
-            this.InvoiceDataGridView.Location = new System.Drawing.Point(3, 60);
+            this.InvoiceDataGridView.Location = new System.Drawing.Point(4, 74);
+            this.InvoiceDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InvoiceDataGridView.Name = "InvoiceDataGridView";
-            this.InvoiceDataGridView.Size = new System.Drawing.Size(431, 150);
+            this.InvoiceDataGridView.Size = new System.Drawing.Size(575, 185);
             this.InvoiceDataGridView.TabIndex = 2;
             // 
             // InvoiceNumber
@@ -133,39 +138,44 @@
             this.invoice.Controls.Add(this.EditInvoiceBtn);
             this.invoice.Controls.Add(this.DeleteInvoiceBtn);
             this.invoice.Controls.Add(this.AddInvoiceBtn);
-            this.invoice.Location = new System.Drawing.Point(453, 3);
+            this.invoice.Location = new System.Drawing.Point(604, 4);
+            this.invoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.invoice.Name = "invoice";
-            this.invoice.Size = new System.Drawing.Size(298, 207);
+            this.invoice.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.invoice.Size = new System.Drawing.Size(397, 255);
             this.invoice.TabIndex = 3;
             this.invoice.TabStop = false;
             this.invoice.Text = "INVOICE";
             // 
-            // AddInvoiceBtn
-            // 
-            this.AddInvoiceBtn.Location = new System.Drawing.Point(217, 19);
-            this.AddInvoiceBtn.Name = "AddInvoiceBtn";
-            this.AddInvoiceBtn.Size = new System.Drawing.Size(75, 23);
-            this.AddInvoiceBtn.TabIndex = 2;
-            this.AddInvoiceBtn.Text = "Add";
-            this.AddInvoiceBtn.UseVisualStyleBackColor = true;
-            // 
             // EditInvoiceBtn
             // 
-            this.EditInvoiceBtn.Location = new System.Drawing.Point(217, 122);
+            this.EditInvoiceBtn.Location = new System.Drawing.Point(289, 150);
+            this.EditInvoiceBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EditInvoiceBtn.Name = "EditInvoiceBtn";
-            this.EditInvoiceBtn.Size = new System.Drawing.Size(75, 23);
+            this.EditInvoiceBtn.Size = new System.Drawing.Size(100, 28);
             this.EditInvoiceBtn.TabIndex = 3;
             this.EditInvoiceBtn.Text = "Edit";
             this.EditInvoiceBtn.UseVisualStyleBackColor = true;
             // 
             // DeleteInvoiceBtn
             // 
-            this.DeleteInvoiceBtn.Location = new System.Drawing.Point(217, 178);
+            this.DeleteInvoiceBtn.Location = new System.Drawing.Point(289, 219);
+            this.DeleteInvoiceBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeleteInvoiceBtn.Name = "DeleteInvoiceBtn";
-            this.DeleteInvoiceBtn.Size = new System.Drawing.Size(75, 23);
+            this.DeleteInvoiceBtn.Size = new System.Drawing.Size(100, 28);
             this.DeleteInvoiceBtn.TabIndex = 4;
             this.DeleteInvoiceBtn.Text = "Delete";
             this.DeleteInvoiceBtn.UseVisualStyleBackColor = true;
+            // 
+            // AddInvoiceBtn
+            // 
+            this.AddInvoiceBtn.Location = new System.Drawing.Point(289, 23);
+            this.AddInvoiceBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddInvoiceBtn.Name = "AddInvoiceBtn";
+            this.AddInvoiceBtn.Size = new System.Drawing.Size(100, 28);
+            this.AddInvoiceBtn.TabIndex = 2;
+            this.AddInvoiceBtn.Text = "Add";
+            this.AddInvoiceBtn.UseVisualStyleBackColor = true;
             // 
             // ProductDataGridView
             // 
@@ -178,11 +188,11 @@
             this.ProductPrice,
             this.Quantity,
             this.Discount});
-            this.ProductDataGridView.Location = new System.Drawing.Point(4, 216);
-            this.ProductDataGridView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ProductDataGridView.Location = new System.Drawing.Point(5, 266);
+            this.ProductDataGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProductDataGridView.Name = "ProductDataGridView";
             this.ProductDataGridView.RowTemplate.Height = 24;
-            this.ProductDataGridView.Size = new System.Drawing.Size(747, 92);
+            this.ProductDataGridView.Size = new System.Drawing.Size(996, 113);
             this.ProductDataGridView.TabIndex = 4;
             // 
             // Name
@@ -222,14 +232,15 @@
             // 
             // FrmSellerInvoiceManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 314);
+            this.ClientSize = new System.Drawing.Size(1208, 386);
+            this.Controls.Add(this.InvoiceDataGridView);
             this.Controls.Add(this.ProductDataGridView);
             this.Controls.Add(this.invoice);
-            this.Controls.Add(this.InvoiceDataGridView);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FrmSellerInvoiceManagement";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            //this.Name = "FrmSellerInvoiceManagement";
             this.Text = "FrmSellerInvoiceManagement";
             this.Load += new System.EventHandler(this.FrmSellerInvoiceManagement_Load);
             this.groupBox1.ResumeLayout(false);
