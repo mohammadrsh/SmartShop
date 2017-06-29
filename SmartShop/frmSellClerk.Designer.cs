@@ -38,16 +38,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.EditCustomerBtn = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.EditCustomerBtn = new System.Windows.Forms.Button();
             this.CustomerDgv = new System.Windows.Forms.DataGridView();
             this.CustomerNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Charj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
             this.InvoiceDgv = new System.Windows.Forms.DataGridView();
+            this.InvoiceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvoiceDateAndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvoiceCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvoiceCustomerNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.invoiceProductNameComoBox = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.DeleteInvoiceBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.EditInvoiceBtn = new System.Windows.Forms.Button();
@@ -60,16 +70,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.invoiceCustomerNumtxt = new System.Windows.Forms.TextBox();
             this.invoiceNumtxt = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.InvoiceNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvoiceDateAndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvoiceCashier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvoiceCustomerNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label14 = new System.Windows.Forms.Label();
-            this.invoiceProductNameComoBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceDgv)).BeginInit();
@@ -180,15 +180,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CUSTOMER";
             // 
-            // EditCustomerBtn
+            // label12
             // 
-            this.EditCustomerBtn.Location = new System.Drawing.Point(68, 262);
-            this.EditCustomerBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.EditCustomerBtn.Name = "EditCustomerBtn";
-            this.EditCustomerBtn.Size = new System.Drawing.Size(88, 28);
-            this.EditCustomerBtn.TabIndex = 19;
-            this.EditCustomerBtn.Text = "Edit";
-            this.EditCustomerBtn.UseVisualStyleBackColor = true;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 247);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(121, 13);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Select Customer To Edit";
             // 
             // button1
             // 
@@ -198,6 +197,25 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 301);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Select Customer To Delete";
+            // 
+            // EditCustomerBtn
+            // 
+            this.EditCustomerBtn.Location = new System.Drawing.Point(68, 262);
+            this.EditCustomerBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.EditCustomerBtn.Name = "EditCustomerBtn";
+            this.EditCustomerBtn.Size = new System.Drawing.Size(88, 28);
+            this.EditCustomerBtn.TabIndex = 19;
+            this.EditCustomerBtn.Text = "Edit";
+            this.EditCustomerBtn.UseVisualStyleBackColor = true;
             // 
             // CustomerDgv
             // 
@@ -232,15 +250,6 @@
             this.Charj.HeaderText = "Charj";
             this.Charj.Name = "Charj";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 301);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 13);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Select Customer To Delete";
-            // 
             // InvoiceDgv
             // 
             this.InvoiceDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -255,6 +264,36 @@
             this.InvoiceDgv.Name = "InvoiceDgv";
             this.InvoiceDgv.Size = new System.Drawing.Size(330, 342);
             this.InvoiceDgv.TabIndex = 22;
+            // 
+            // InvoiceNumber
+            // 
+            this.InvoiceNumber.HeaderText = "Invoice Number";
+            this.InvoiceNumber.Name = "InvoiceNumber";
+            // 
+            // InvoiceDateAndTime
+            // 
+            this.InvoiceDateAndTime.HeaderText = "Invoice Date And Time";
+            this.InvoiceDateAndTime.Name = "InvoiceDateAndTime";
+            // 
+            // InvoiceCashier
+            // 
+            this.InvoiceCashier.HeaderText = "Invoice Cashier";
+            this.InvoiceCashier.Name = "InvoiceCashier";
+            // 
+            // InvoiceCustomerNumber
+            // 
+            this.InvoiceCustomerNumber.HeaderText = "Customer Number";
+            this.InvoiceCustomerNumber.Name = "InvoiceCustomerNumber";
+            // 
+            // ProductName
+            // 
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.Name = "ProductName";
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.HeaderText = "Product Price";
+            this.ProductPrice.Name = "ProductPrice";
             // 
             // groupBox2
             // 
@@ -279,6 +318,32 @@
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "INVOICE";
+            // 
+            // invoiceProductNameComoBox
+            // 
+            this.invoiceProductNameComoBox.FormattingEnabled = true;
+            this.invoiceProductNameComoBox.Location = new System.Drawing.Point(103, 161);
+            this.invoiceProductNameComoBox.Name = "invoiceProductNameComoBox";
+            this.invoiceProductNameComoBox.Size = new System.Drawing.Size(68, 21);
+            this.invoiceProductNameComoBox.TabIndex = 24;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(11, 164);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(72, 13);
+            this.label14.TabIndex = 23;
+            this.label14.Text = "ProductName";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(11, 239);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(112, 13);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Select Invoice To Edit";
             // 
             // DeleteInvoiceBtn
             // 
@@ -390,72 +455,7 @@
             this.invoiceNumtxt.Size = new System.Drawing.Size(68, 20);
             this.invoiceNumtxt.TabIndex = 14;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(11, 239);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(112, 13);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "Select Invoice To Edit";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 247);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(121, 13);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Select Customer To Edit";
-            // 
-            // InvoiceNumber
-            // 
-            this.InvoiceNumber.HeaderText = "Invoice Number";
-            this.InvoiceNumber.Name = "InvoiceNumber";
-            // 
-            // InvoiceDateAndTime
-            // 
-            this.InvoiceDateAndTime.HeaderText = "Invoice Date And Time";
-            this.InvoiceDateAndTime.Name = "InvoiceDateAndTime";
-            // 
-            // InvoiceCashier
-            // 
-            this.InvoiceCashier.HeaderText = "Invoice Cashier";
-            this.InvoiceCashier.Name = "InvoiceCashier";
-            // 
-            // InvoiceCustomerNumber
-            // 
-            this.InvoiceCustomerNumber.HeaderText = "Customer Number";
-            this.InvoiceCustomerNumber.Name = "InvoiceCustomerNumber";
-            // 
-            // ProductName
-            // 
-            this.ProductName.HeaderText = "Product Name";
-            this.ProductName.Name = "ProductName";
-            // 
-            // ProductPrice
-            // 
-            this.ProductPrice.HeaderText = "Product Price";
-            this.ProductPrice.Name = "ProductPrice";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(11, 164);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 13);
-            this.label14.TabIndex = 23;
-            this.label14.Text = "ProductName";
-            // 
-            // invoiceProductNameComoBox
-            // 
-            this.invoiceProductNameComoBox.FormattingEnabled = true;
-            this.invoiceProductNameComoBox.Location = new System.Drawing.Point(103, 161);
-            this.invoiceProductNameComoBox.Name = "invoiceProductNameComoBox";
-            this.invoiceProductNameComoBox.Size = new System.Drawing.Size(68, 21);
-            this.invoiceProductNameComoBox.TabIndex = 24;
-            // 
-            // SellClreckfrm
+            // FrmSellClerk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -464,9 +464,8 @@
             this.Controls.Add(this.InvoiceDgv);
             this.Controls.Add(this.CustomerDgv);
             this.Controls.Add(this.groupBox1);
-            this.Name = "SellClreckfrm";
+            this.Name = "FrmSellClerk";
             this.Text = "SellClreckfrm";
-            this.Load += new System.EventHandler(this.SellClreckfrm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerDgv)).EndInit();

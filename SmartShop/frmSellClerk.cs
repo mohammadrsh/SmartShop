@@ -17,9 +17,5 @@ namespace SmartShop
             InitializeComponent();
         }
 
-        private void SellClreckfrm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
