@@ -26,7 +26,14 @@ namespace SmartShop
         void loadProduct() {
 
             Db db = new Db();
-            //dgProductList.DataSource = db.pr
+          //  dgProductList.DataSource = db.kala.ToArray().Select(l => new
+            {
+               // id = l.id;
+
+
+
+         //   })
+                                //     .ToArray();
         }
     }
 }
