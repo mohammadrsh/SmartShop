@@ -70,7 +70,7 @@
             this.combUserType.FormattingEnabled = true;
             this.combUserType.Items.AddRange(new object[] {
             "Admin",
-            "SockClerk",
+            "StockClerk",
             "SellClerk"});
             this.combUserType.Location = new System.Drawing.Point(316, 122);
             this.combUserType.Name = "combUserType";
