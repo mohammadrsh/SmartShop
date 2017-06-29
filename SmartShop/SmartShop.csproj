@@ -218,6 +218,7 @@
       <DependentUpon>DbModel.edmx</DependentUpon>
       <LastGenOutput>DbModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\online-shopping-sites.jpg" />
     <None Include="Resources\online-shopping-ecommerce-ss-1920.png" />
   </ItemGroup>
   <ItemGroup>

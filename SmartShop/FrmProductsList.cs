@@ -23,17 +23,19 @@ namespace SmartShop
             this.kalaTableAdapter.Fill(this.smartShopDataSet.Kala);
 
         }
-        void loadProduct() {
+        void loadProduct()
+        {
 
             Db db = new Db();
-          //  dgProductList.DataSource = db.kala.ToArray().Select(l => new
+            //  dgProductList.DataSource = db.kala.ToArray().Select(l => new
             {
-               // id = l.id;
+                // id = l.id;
 
 
 
-         //   })
-                                //     .ToArray();
+                //   })
+                //     .ToArray();
+            }
         }
     }
 }
