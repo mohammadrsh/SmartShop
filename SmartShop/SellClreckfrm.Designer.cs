@@ -48,11 +48,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.InvoiceDgv = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.DeleteInvoiceBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.EditInvoiceBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.AddInvoiceBtn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.invoiceDateAndTimetxt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -261,11 +261,11 @@
             this.groupBox2.Controls.Add(this.invoiceProductNameComoBox);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.DeleteInvoiceBtn);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.EditInvoiceBtn);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.AddInvoiceBtn);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.invoiceDateAndTimetxt);
             this.groupBox2.Controls.Add(this.label9);
@@ -280,14 +280,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "INVOICE";
             // 
-            // button2
+            // DeleteInvoiceBtn
             // 
-            this.button2.Location = new System.Drawing.Point(68, 309);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 31);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
+            this.DeleteInvoiceBtn.Location = new System.Drawing.Point(68, 309);
+            this.DeleteInvoiceBtn.Name = "DeleteInvoiceBtn";
+            this.DeleteInvoiceBtn.Size = new System.Drawing.Size(88, 31);
+            this.DeleteInvoiceBtn.TabIndex = 0;
+            this.DeleteInvoiceBtn.Text = "Delete";
+            this.DeleteInvoiceBtn.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -298,15 +298,15 @@
             this.label6.TabIndex = 20;
             this.label6.Text = "Select Invoice To Delete";
             // 
-            // button3
+            // EditInvoiceBtn
             // 
-            this.button3.Location = new System.Drawing.Point(68, 254);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 28);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.EditInvoiceBtn.Location = new System.Drawing.Point(68, 254);
+            this.EditInvoiceBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.EditInvoiceBtn.Name = "EditInvoiceBtn";
+            this.EditInvoiceBtn.Size = new System.Drawing.Size(88, 28);
+            this.EditInvoiceBtn.TabIndex = 19;
+            this.EditInvoiceBtn.Text = "Edit";
+            this.EditInvoiceBtn.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -318,15 +318,15 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Number";
             // 
-            // button4
+            // AddInvoiceBtn
             // 
-            this.button4.Location = new System.Drawing.Point(68, 199);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(88, 28);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = true;
+            this.AddInvoiceBtn.Location = new System.Drawing.Point(68, 199);
+            this.AddInvoiceBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.AddInvoiceBtn.Name = "AddInvoiceBtn";
+            this.AddInvoiceBtn.Size = new System.Drawing.Size(88, 28);
+            this.AddInvoiceBtn.TabIndex = 18;
+            this.AddInvoiceBtn.Text = "Add";
+            this.AddInvoiceBtn.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -466,6 +466,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "SellClreckfrm";
             this.Text = "SellClreckfrm";
+            this.Load += new System.EventHandler(this.SellClreckfrm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerDgv)).EndInit();
@@ -500,11 +501,11 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button DeleteInvoiceBtn;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button EditInvoiceBtn;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button AddInvoiceBtn;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox invoiceDateAndTimetxt;
         private System.Windows.Forms.Label label9;
