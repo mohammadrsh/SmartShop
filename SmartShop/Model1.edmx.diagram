@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4368ebaea54d44568d8dc1f8dd18df1a" Name="Diagram1">
+        <EntityTypeShape EntityType="SmartShopModel1.Buy" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShopModel1.Customer" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShopModel1.Invoice" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShopModel1.Kala" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShopModel1.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShopModel1.Transaction" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartShopModel1.User" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="SmartShopModel1.FK_Buy_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShopModel1.FK_Buy_Invoice1" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShopModel1.FK_Buy_Kala" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShopModel1.FK_Invoice_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShopModel1.FK_Invoice_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShopModel1.FK_Transaction_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartShopModel1.FK_Kala_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

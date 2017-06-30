@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SmartShopModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Buy">
+          <Key>
+            <PropertyRef Name="kala_id" />
+            <PropertyRef Name="invoice_id" />
+          </Key>
+          <Property Name="kala_id" Type="int" Nullable="false" />
+          <Property Name="invoice_id" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="phone" Type="int" Nullable="false" />
+          <Property Name="charj" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="date" Type="datetime" Nullable="false" />
+          <Property Name="sellCrerk_id" Type="int" Nullable="false" />
+          <Property Name="customer_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kala">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="producer" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="creatDate" Type="datetime" Nullable="false" />
+          <Property Name="expireDate" Type="datetime" Nullable="false" />
+          <Property Name="price" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+          <Property Name="discount" Type="int" Nullable="false" />
+          <Property Name="seller" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="submitDate" Type="datetime" Nullable="false" />
+          <Property Name="stockClerk_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="price" Type="int" Nullable="false" />
+          <Property Name="isChecked" Type="bit" Nullable="false" />
+          <Property Name="date" Type="datetime" Nullable="false" />
+          <Property Name="invoice_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="pass" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="access" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Buy_Invoice">
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+          <End Role="Buy" Type="Self.Buy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Buy">
+              <PropertyRef Name="invoice_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Buy_Invoice1">
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+          <End Role="Buy" Type="Self.Buy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Buy">
+              <PropertyRef Name="invoice_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Buy_Kala">
+          <End Role="Kala" Type="Self.Kala" Multiplicity="1" />
+          <End Role="Buy" Type="Self.Buy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kala">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Buy">
+              <PropertyRef Name="kala_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Invoice_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Invoice_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="sellCrerk_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kala_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Kala" Type="Self.Kala" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Kala">
+              <PropertyRef Name="stockClerk_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Transaction_Invoice">
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+          <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Transaction">
+              <PropertyRef Name="invoice_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="SmartShopModel1StoreContainer">
+          <EntitySet Name="Buy" EntityType="Self.Buy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kala" EntityType="Self.Kala" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Buy_Invoice" Association="Self.FK_Buy_Invoice">
+            <End Role="Invoice" EntitySet="Invoice" />
+            <End Role="Buy" EntitySet="Buy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Buy_Invoice1" Association="Self.FK_Buy_Invoice1">
+            <End Role="Invoice" EntitySet="Invoice" />
+            <End Role="Buy" EntitySet="Buy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Buy_Kala" Association="Self.FK_Buy_Kala">
+            <End Role="Kala" EntitySet="Kala" />
+            <End Role="Buy" EntitySet="Buy" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invoice_Customer" Association="Self.FK_Invoice_Customer">
+            <End Role="Customer" EntitySet="Customer" />
+            <End Role="Invoice" EntitySet="Invoice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invoice_User" Association="Self.FK_Invoice_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Invoice" EntitySet="Invoice" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kala_User" Association="Self.FK_Kala_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Kala" EntitySet="Kala" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transaction_Invoice" Association="Self.FK_Transaction_Invoice">
+            <End Role="Invoice" EntitySet="Invoice" />
+            <End Role="Transaction" EntitySet="Transaction" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SmartShopModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Buy">
+          <Key>
+            <PropertyRef Name="kala_id" />
+            <PropertyRef Name="invoice_id" />
+          </Key>
+          <Property Name="kala_id" Type="Int32" Nullable="false" />
+          <Property Name="invoice_id" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Invoice" Relationship="Self.FK_Buy_Invoice" FromRole="Buy" ToRole="Invoice" />
+          <NavigationProperty Name="Invoice1" Relationship="Self.FK_Buy_Invoice1" FromRole="Buy" ToRole="Invoice" />
+          <NavigationProperty Name="Kala" Relationship="Self.FK_Buy_Kala" FromRole="Buy" ToRole="Kala" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="phone" Type="Int32" Nullable="false" />
+          <Property Name="charj" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoice_Customer" FromRole="Customer" ToRole="Invoice" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="sellCrerk_id" Type="Int32" Nullable="false" />
+          <Property Name="customer_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Buys" Relationship="Self.FK_Buy_Invoice" FromRole="Invoice" ToRole="Buy" />
+          <NavigationProperty Name="Buys1" Relationship="Self.FK_Buy_Invoice1" FromRole="Invoice" ToRole="Buy" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK_Invoice_Customer" FromRole="Invoice" ToRole="Customer" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Invoice_User" FromRole="Invoice" ToRole="User" />
+          <NavigationProperty Name="Transactions" Relationship="Self.FK_Transaction_Invoice" FromRole="Invoice" ToRole="Transaction" />
+        </EntityType>
+        <EntityType Name="Kala">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="producer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="creatDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="expireDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="price" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <Property Name="discount" Type="Int32" Nullable="false" />
+          <Property Name="seller" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="submitDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="stockClerk_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Buys" Relationship="Self.FK_Buy_Kala" FromRole="Kala" ToRole="Buy" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Kala_User" FromRole="Kala" ToRole="User" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="price" Type="Int32" Nullable="false" />
+          <Property Name="isChecked" Type="Boolean" Nullable="false" />
+          <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="invoice_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Invoice" Relationship="Self.FK_Transaction_Invoice" FromRole="Transaction" ToRole="Invoice" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pass" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="access" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Invoices" Relationship="Self.FK_Invoice_User" FromRole="User" ToRole="Invoice" />
+          <NavigationProperty Name="Kalas" Relationship="Self.FK_Kala_User" FromRole="User" ToRole="Kala" />
+        </EntityType>
+        <Association Name="FK_Buy_Invoice">
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+          <End Role="Buy" Type="Self.Buy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Buy">
+              <PropertyRef Name="invoice_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Buy_Invoice1">
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+          <End Role="Buy" Type="Self.Buy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Buy">
+              <PropertyRef Name="invoice_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Buy_Kala">
+          <End Role="Kala" Type="Self.Kala" Multiplicity="1" />
+          <End Role="Buy" Type="Self.Buy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kala">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Buy">
+              <PropertyRef Name="kala_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Invoice_Customer">
+          <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Customer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Invoice_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Invoice">
+              <PropertyRef Name="sellCrerk_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Transaction_Invoice">
+          <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+          <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Invoice">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Transaction">
+              <PropertyRef Name="invoice_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kala_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Kala" Type="Self.Kala" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Kala">
+              <PropertyRef Name="stockClerk_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SmartShopEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Buys" EntityType="Self.Buy" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Invoices" EntityType="Self.Invoice" />
+          <EntitySet Name="Kalas" EntityType="Self.Kala" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="Transactions" EntityType="Self.Transaction" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_Buy_Invoice" Association="Self.FK_Buy_Invoice">
+            <End Role="Invoice" EntitySet="Invoices" />
+            <End Role="Buy" EntitySet="Buys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Buy_Invoice1" Association="Self.FK_Buy_Invoice1">
+            <End Role="Invoice" EntitySet="Invoices" />
+            <End Role="Buy" EntitySet="Buys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Buy_Kala" Association="Self.FK_Buy_Kala">
+            <End Role="Kala" EntitySet="Kalas" />
+            <End Role="Buy" EntitySet="Buys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invoice_Customer" Association="Self.FK_Invoice_Customer">
+            <End Role="Customer" EntitySet="Customers" />
+            <End Role="Invoice" EntitySet="Invoices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Invoice_User" Association="Self.FK_Invoice_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Invoice" EntitySet="Invoices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Transaction_Invoice" Association="Self.FK_Transaction_Invoice">
+            <End Role="Invoice" EntitySet="Invoices" />
+            <End Role="Transaction" EntitySet="Transactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kala_User" Association="Self.FK_Kala_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Kala" EntitySet="Kalas" />
+          </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SmartShopModel1StoreContainer" CdmEntityContainer="SmartShopEntities1">
+          <EntitySetMapping Name="Buys">
+            <EntityTypeMapping TypeName="SmartShopModel1.Buy">
+              <MappingFragment StoreEntitySet="Buy">
+                <ScalarProperty Name="kala_id" ColumnName="kala_id" />
+                <ScalarProperty Name="invoice_id" ColumnName="invoice_id" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="SmartShopModel1.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="charj" ColumnName="charj" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Invoices">
+            <EntityTypeMapping TypeName="SmartShopModel1.Invoice">
+              <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="sellCrerk_id" ColumnName="sellCrerk_id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kalas">
+            <EntityTypeMapping TypeName="SmartShopModel1.Kala">
+              <MappingFragment StoreEntitySet="Kala">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="producer" ColumnName="producer" />
+                <ScalarProperty Name="creatDate" ColumnName="creatDate" />
+                <ScalarProperty Name="expireDate" ColumnName="expireDate" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="discount" ColumnName="discount" />
+                <ScalarProperty Name="seller" ColumnName="seller" />
+                <ScalarProperty Name="submitDate" ColumnName="submitDate" />
+                <ScalarProperty Name="stockClerk_id" ColumnName="stockClerk_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="SmartShopModel1.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transactions">
+            <EntityTypeMapping TypeName="SmartShopModel1.Transaction">
+              <MappingFragment StoreEntitySet="Transaction">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="isChecked" ColumnName="isChecked" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="invoice_id" ColumnName="invoice_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="SmartShopModel1.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user1" ColumnName="user" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+                <ScalarProperty Name="access" ColumnName="access" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SmartShopModel1.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SmartShopModel1.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SmartShopModel1.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SmartShopModel1.Store.sp_helpdiagramdefinition" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SmartShopModel1.Store.sp_helpdiagrams" />
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SmartShopModel1.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SmartShopModel1.Store.sp_upgraddiagrams" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
