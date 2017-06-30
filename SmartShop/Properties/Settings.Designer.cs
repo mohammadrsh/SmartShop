@@ -32,5 +32,15 @@ namespace SmartShop.Properties {
                 return ((string)(this["SmartShopConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-D3QG58J;Initial Catalog=SmartShop;Integrated Security=True")]
+        public string SmartShopConnectionString1 {
+            get {
+                return ((string)(this["SmartShopConnectionString1"]));
+            }
+        }
     }
 }

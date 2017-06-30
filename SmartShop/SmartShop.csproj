@@ -175,6 +175,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SmartShopDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SmartShopDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartShopDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -263,6 +268,17 @@
     </None>
     <None Include="SmartShopDataSet.xss">
       <DependentUpon>SmartShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SmartShopDataSet1.xsc">
+      <DependentUpon>SmartShopDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SmartShopDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartShopDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartShopDataSet1.xss">
+      <DependentUpon>SmartShopDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

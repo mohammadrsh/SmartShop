@@ -31,6 +31,7 @@ namespace SmartShop
             var context = Db.getInstance();
 
             User user = context.Users.FirstOrDefault(u => u.user1 == username);
+            
             if(user == null)
             {
                 MessageBox.Show("User not found!");

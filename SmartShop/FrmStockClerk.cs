@@ -16,5 +16,12 @@ namespace SmartShop
         {
             InitializeComponent();
         }
+
+        private void FrmStockClerk_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'smartShopDataSet1.Kala' table. You can move, or remove it, as needed.
+            this.kalaTableAdapter.Fill(this.smartShopDataSet1.Kala);
+
+        }
     }
 }
