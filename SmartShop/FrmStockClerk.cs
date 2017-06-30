@@ -16,12 +16,21 @@ namespace SmartShop
         {
             InitializeComponent();
         }
+        public int dbID = 0;
 
         private void FrmStockClerk_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'smartShopDataSet1.Kala' table. You can move, or remove it, as needed.
             this.kalaTableAdapter.Fill(this.smartShopDataSet1.Kala);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmAddProduct frm = new FrmAddProduct();
+            frm.dbID = dbID;
+            frm.ShowDialog();
+            
         }
     }
 }

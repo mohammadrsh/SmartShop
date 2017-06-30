@@ -31,7 +31,8 @@ namespace SmartShop
             var context = Db.getInstance();
 
             User user = context.Users.FirstOrDefault(u => u.user1 == username);
-            
+            int dbID = user.id;
+                        
             if(user == null)
             {
                 MessageBox.Show("User not found!");
@@ -39,13 +40,16 @@ namespace SmartShop
             }
             if(user.pass == password)
             {
+                int access = user.access;
                 MessageBox.Show("Login successfull!");
 
-                int access = user.access;
+                
                 if(access == 0)
                 {
                     FrmAdminMenu frm = new FrmAdminMenu();
+                    frm.dbID = dbID;
                     frm.ShowDialog();
+                    
                 }
                     
                 //else if (access == 1)

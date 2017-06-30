@@ -35,9 +35,10 @@
             // 
             // btnSignUp
             // 
-            this.btnSignUp.Location = new System.Drawing.Point(148, 91);
+            this.btnSignUp.Location = new System.Drawing.Point(197, 112);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(75, 23);
+            this.btnSignUp.Size = new System.Drawing.Size(100, 28);
             this.btnSignUp.TabIndex = 0;
             this.btnSignUp.Text = "Sign Up!";
             this.btnSignUp.UseVisualStyleBackColor = true;
@@ -45,31 +46,35 @@
             // 
             // btnStockClerk
             // 
-            this.btnStockClerk.Location = new System.Drawing.Point(124, 137);
+            this.btnStockClerk.Location = new System.Drawing.Point(165, 169);
+            this.btnStockClerk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStockClerk.Name = "btnStockClerk";
-            this.btnStockClerk.Size = new System.Drawing.Size(125, 23);
+            this.btnStockClerk.Size = new System.Drawing.Size(167, 28);
             this.btnStockClerk.TabIndex = 0;
             this.btnStockClerk.Text = "Stock Clerk Menu!";
             this.btnStockClerk.UseVisualStyleBackColor = true;
+            this.btnStockClerk.Click += new System.EventHandler(this.btnStockClerk_Click);
             // 
             // btnSellClerk
             // 
-            this.btnSellClerk.Location = new System.Drawing.Point(135, 185);
+            this.btnSellClerk.Location = new System.Drawing.Point(180, 228);
+            this.btnSellClerk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSellClerk.Name = "btnSellClerk";
-            this.btnSellClerk.Size = new System.Drawing.Size(101, 23);
+            this.btnSellClerk.Size = new System.Drawing.Size(135, 28);
             this.btnSellClerk.TabIndex = 0;
             this.btnSellClerk.Text = "SellClerkMenu!";
             this.btnSellClerk.UseVisualStyleBackColor = true;
             // 
-            // frmAdminMenu
+            // FrmAdminMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 329);
+            this.ClientSize = new System.Drawing.Size(487, 405);
             this.Controls.Add(this.btnSellClerk);
             this.Controls.Add(this.btnStockClerk);
             this.Controls.Add(this.btnSignUp);
-            this.Name = "frmAdminMenu";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "FrmAdminMenu";
             this.Text = "frmAdminMenu";
             this.ResumeLayout(false);
 

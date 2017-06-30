@@ -61,5 +61,12 @@ namespace SmartShop
             var context = Db.getInstance();
             return context.Customers.ToList();
         }
+
+        public void addProduct(Kala k)
+        {
+            var context = Db.getInstance();
+            context.Kalas.Add(k);
+            context.SaveChanges();
+        }
     }
 }

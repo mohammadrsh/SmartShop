@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.lblPageName = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.kalaDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kalaRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.smartShopDataSet = new SmartShop.SmartShopDataSet();
-            this.smartShopDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.smartShopDataSet1 = new SmartShop.SmartShopDataSet1();
-            this.kalaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kalaTableAdapter = new SmartShop.SmartShopDataSet1TableAdapters.KalaTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,13 +42,21 @@
             this.sellerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.submitDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockClerkidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kalaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.smartShopDataSet1 = new SmartShop.SmartShopDataSet1();
+            this.kalaDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kalaRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.smartShopDataSet = new SmartShop.SmartShopDataSet();
+            this.smartShopDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kalaTableAdapter = new SmartShop.SmartShopDataSet1TableAdapters.KalaTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kalaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smartShopDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalaDataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalaRowBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartShopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartShopDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartShopDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kalaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPageName
@@ -87,40 +88,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(47, 83);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1143, 150);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1143, 428);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // kalaDataTableBindingSource
-            // 
-            this.kalaDataTableBindingSource.DataSource = typeof(SmartShop.SmartShopDataSet.KalaDataTable);
-            // 
-            // kalaRowBindingSource
-            // 
-            this.kalaRowBindingSource.DataSource = typeof(SmartShop.SmartShopDataSet.KalaRow);
-            // 
-            // smartShopDataSet
-            // 
-            this.smartShopDataSet.DataSetName = "SmartShopDataSet";
-            this.smartShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // smartShopDataSetBindingSource
-            // 
-            this.smartShopDataSetBindingSource.DataSource = this.smartShopDataSet;
-            this.smartShopDataSetBindingSource.Position = 0;
-            // 
-            // smartShopDataSet1
-            // 
-            this.smartShopDataSet1.DataSetName = "SmartShopDataSet1";
-            this.smartShopDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kalaBindingSource
-            // 
-            this.kalaBindingSource.DataMember = "Kala";
-            this.kalaBindingSource.DataSource = this.smartShopDataSet1;
-            // 
-            // kalaTableAdapter
-            // 
-            this.kalaTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -189,24 +159,67 @@
             this.stockClerkidDataGridViewTextBoxColumn.HeaderText = "stockClerk_id";
             this.stockClerkidDataGridViewTextBoxColumn.Name = "stockClerkidDataGridViewTextBoxColumn";
             // 
+            // kalaBindingSource
+            // 
+            this.kalaBindingSource.DataMember = "Kala";
+            this.kalaBindingSource.DataSource = this.smartShopDataSet1;
+            // 
+            // smartShopDataSet1
+            // 
+            this.smartShopDataSet1.DataSetName = "SmartShopDataSet1";
+            this.smartShopDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kalaDataTableBindingSource
+            // 
+            this.kalaDataTableBindingSource.DataSource = typeof(SmartShop.SmartShopDataSet.KalaDataTable);
+            // 
+            // kalaRowBindingSource
+            // 
+            this.kalaRowBindingSource.DataSource = typeof(SmartShop.SmartShopDataSet.KalaRow);
+            // 
+            // smartShopDataSet
+            // 
+            this.smartShopDataSet.DataSetName = "SmartShopDataSet";
+            this.smartShopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // smartShopDataSetBindingSource
+            // 
+            this.smartShopDataSetBindingSource.DataSource = this.smartShopDataSet;
+            this.smartShopDataSetBindingSource.Position = 0;
+            // 
+            // kalaTableAdapter
+            // 
+            this.kalaTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(47, 534);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmStockClerk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1237, 585);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblPageName);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmStockClerk";
             this.Text = "FrmStockClerk";
             this.Load += new System.EventHandler(this.FrmStockClerk_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kalaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smartShopDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalaDataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kalaRowBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartShopDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartShopDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartShopDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kalaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +247,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sellerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn submitDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockClerkidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }

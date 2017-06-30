@@ -16,11 +16,20 @@ namespace SmartShop
         {
             InitializeComponent();
         }
+        public  int dbID = 0;
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             FrmSignUp frm = new FrmSignUp();
             frm.ShowDialog();
+        }
+
+        private void btnStockClerk_Click(object sender, EventArgs e)
+        {
+            FrmStockClerk frm = new FrmStockClerk();
+            frm.dbID = dbID;
+            frm.ShowDialog();
+            
         }
     }
 }
